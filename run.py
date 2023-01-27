@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request
 from itertools import islice
 
 app = Flask(__name__)
@@ -22,7 +22,8 @@ def post():
         "value" : 1357
     }
     '''
-    return "{ name : " + user["name"] + " }"
+    result = dict(islice(user.items(), 1))
+    return result
     
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=5000)
