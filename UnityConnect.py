@@ -7,4 +7,4 @@ def connect():
     return "연결 성공"
 
 if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0', port=3306)
+    app.run(debug=True, host='0.0.0.0', port=5000)
